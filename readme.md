@@ -36,7 +36,7 @@
        curl -XGET -H "Content-type: application/json" 'http://localhost:8080/data/pets/search?name=Boola
 
 #### Search for a pet by age
-       curl -XGET -H "Content-type: application/json" 'http://localhost:8080/data/pets/search?id=2'curl -XGET -H "Content-type: application/json" 'http://localhost:8080/data/pets/search?age=4
+       curl -XGET -H "Content-type: application/json" 'http://localhost:8080/data/pets/search?id=2'
 
 ### Pet types
 #### View all pet types
