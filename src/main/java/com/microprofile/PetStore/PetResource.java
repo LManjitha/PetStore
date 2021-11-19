@@ -50,7 +50,7 @@ public class PetResource {
             if(isPetFound){
                 return Response.ok(PetSingleton.getInstance().getArrayList().get(id)).build();
             }else{
-                return Response.ok("There is no pet with id = "+petId).build();
+                return Response.ok("{\n" + "\"isFound\":false\n" + "}").build();
             }
         }else if(petId == -1 && !petName.equals("null") && petAge == 0){
             for (int i=0;i<PetSingleton.getInstance().getArrayList().size();i++){
@@ -62,7 +62,7 @@ public class PetResource {
             if(isPetFound){
                 return Response.ok(PetSingleton.getInstance().getArrayList().get(id)).build();
             }else{
-                return Response.ok("There is no pet with name = "+petName).build();
+                return Response.ok("{\n" + "\"isFound\":false\n" + "}").build();
             }
         }else if(petId == -1 && petName.equals("null") && petAge != 0){
             List<Pet> temp = new ArrayList<Pet>();
@@ -76,7 +76,7 @@ public class PetResource {
             if(isPetFound){
                 return Response.ok(temp).build();
             }else{
-                return Response.ok("There is no pet with age = "+petAge).build();
+                return Response.ok("{\n" + "\"isFound\":false\n" + "}").build();
             }
         }else{
             return Response.status(Status.NOT_FOUND).build();
